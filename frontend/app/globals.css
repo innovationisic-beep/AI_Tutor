@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --border: 214 32% 91%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+    --border: 217 33% 17%;
+  }
+
+  body {
+    @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))] antialiased;
+  }
+}
+
+@layer utilities {
+  .patrick-hand-regular {
+    font-family: var(--font-handwriting), cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  /** Zone 0 whiteboard — matches VTSE explanation typography (Patrick Hand 16px / 21px). */
+  .whiteboard-teaching-text {
+    font-family: var(--font-handwriting), cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 21px;
+    @apply text-slate-800 dark:text-slate-100;
+  }
+
+  .whiteboard-visual {
+    margin-bottom: 12px;
+  }
+
+  .v3-writing-marker {
+    animation: v3-marker-write 0.55s ease-in-out infinite;
+  }
+
+  @keyframes v3-marker-write {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.88;
+    }
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}

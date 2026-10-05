@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment files
+.env
+.env.*
+backend/.env
+frontend/.env
+frontend/.env.local
+
+# Node
+node_modules/
+
+# Build
+dist/
+build/
+.next/
+
+# Logs
+*.log
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test artifacts
+*.txt
+
+# Python cache
+.pytest_cache/
+
+# Coverage
+.coverage
+htmlcov/
+
+# Temporary
+temp/
+tmp/
+
+# Story Hook visual binaries (LocalStoryHookStorage dev provider)
+backend/storage/
+
+# VTSE audit artifacts
+audit_*.json
+
+# Local notes
+New Text Document.txt
